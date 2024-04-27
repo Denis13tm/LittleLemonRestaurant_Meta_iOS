@@ -121,17 +121,23 @@ struct ReservationForm: View {
                     
                     
                     // add the RESERVE button
-                    Button(action: {
-                        validateForm()
-                    }, label: {
-                        Text("CONFIRM RESERVATION")
-                    })
-                    .padding(.init(top: 10, leading: 30, bottom: 10, trailing: 30))
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(20)
-                    .padding(.top, 10)
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            validateForm()
+                        }, label: {
+                            Text("CONFIRM RESERVATION")
+                        })
+                        .padding(.init(top: 10, leading: 30, bottom: 10, trailing: 30))
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(20)
+                        .padding(.top, 10)
+                        
+                        Spacer()
+                    }
                 }
+                
             }
             
             // Forms have this space between the title and the content
